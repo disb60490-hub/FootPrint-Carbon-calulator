@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Carbon Footprint Calculator</h1>
+      <p>Calculate your personal CO₂ footprint and compare it to the global average.</p>
+    </header>
+
+    <!-- Questions Section -->
+    <section id="question-section">
+      <div id="question-container">
+        <h2 id="question-title"></h2>
+        <div id="options"></div>
+        <button id="next-btn" disabled>Next</button>
+      </div>
+    </section>
+
+    <!-- Result Section (hidden at start) -->
+    <section id="result-section" style="display: none;">
+      <h2>Your Carbon Footprint Result</h2>
+      
+      <p id="result-text" class="result-big"></p>
+      
+      <p id="comparison-text" class="comparison"></p>
+      
+      <div class="chart-container">
+        <canvas id="compareChart"></canvas>
+      </div>
+
+      <button id="recalculate-btn">Recalculate</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
